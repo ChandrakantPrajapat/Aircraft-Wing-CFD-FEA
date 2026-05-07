@@ -1,0 +1,91 @@
+# =========================
+# MATLAB
+# =========================
+
+*.asv
+*.autosave
+*.fig~
+slprj/
+sfprj/
+codegen/
+*.mex*
+*.mexa64
+*.mexw64
+*.p
+*.slxc
+
+# =========================
+# ANSYS / CFD
+# =========================
+
+*.cas
+*.cas.h5
+*.dat
+*.dat.h5
+*.trn
+*.out
+*.err
+*.log
+*.cgns
+
+*.rst
+*.rth
+*.mode
+*.full
+*.esav
+*.emat
+*.mntr
+
+# Fluent autosaves
+autosave*
+
+# Mesh files
+*.msh
+
+# =========================
+# Temporary Files
+# =========================
+
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.pyc
+
+# =========================
+# VS Code
+# =========================
+
+.vscode/
+
+# =========================
+# Large Simulation Results
+# =========================
+
+05_CFD/Results/
+06_FEA/Results/
+
+# =========================
+# Ignore cache
+# =========================
+
+.cache/
+# MATLAB autosave
+*.asv
+
+# MATLAB project metadata
+resources/
+*.prj
+
+# MATLAB cache
+.slxc/
