@@ -1,0 +1,886 @@
+Language="VBSCRIPT"
+
+Sub CATMain()
+
+Dim partDocument1 As Document
+Set partDocument1 = CATIA.ActiveDocument
+
+Dim part1 As Part
+Set part1 = partDocument1.Part
+
+Dim hybridBodies1 As HybridBodies
+Set hybridBodies1 = part1.HybridBodies
+
+Dim hybridBody1 As HybridBody
+Set hybridBody1 = hybridBodies1.Item("03_Airfoils")
+
+Dim sketches1 As Sketches
+Set sketches1 = hybridBody1.HybridSketches
+
+Dim sketch1 As Sketch
+Set sketch1 = sketches1.Item("Root_Airfoil_NACA2412")
+
+Dim factory2D1 As Factory2D
+Set factory2D1 = sketch1.Factory2D
+
+Dim point2D1 As Point2D
+Set point2D1 = factory2D1.CreatePoint(10.000000, 5.000000)
+
+point2D1.ReportName = 60
+
+point2D1.Construction = False
+
+Dim constraints1 As Constraints
+Set constraints1 = sketch1.Constraints
+
+Dim constraint1 As Constraint
+Set constraint1 = constraints1.Item("Offset.10")
+
+Dim length1 As Dimension
+Set length1 = constraint1.Dimension
+
+length1.Value = 0.125721
+
+Dim constraint2 As Constraint
+Set constraint2 = constraints1.Item("Offset.11")
+
+Dim length2 As Dimension
+Set length2 = constraint2.Dimension
+
+length2.Value = 100.008381
+
+Dim constraint3 As Constraint
+Set constraint3 = constraints1.Item("Offset.14")
+
+Dim length3 As Dimension
+Set length3 = constraint3.Dimension
+
+length3.Value = 0.446913
+
+Dim constraint4 As Constraint
+Set constraint4 = constraints1.Item("Offset.15")
+
+Dim length4 As Dimension
+Set length4 = constraint4.Dimension
+
+length4.Value = 98.451462
+
+Dim constraint5 As Constraint
+Set constraint5 = constraints1.Item("Offset.16")
+
+Dim length5 As Dimension
+Set length5 = constraint5.Dimension
+
+length5.Value = 0.834234
+
+Dim constraint6 As Constraint
+Set constraint6 = constraints1.Item("Offset.17")
+
+Dim length6 As Dimension
+Set length6 = constraint6.Dimension
+
+length6.Value = 96.526923
+
+Dim constraint7 As Constraint
+Set constraint7 = constraints1.Item("Offset.18")
+
+Dim length7 As Dimension
+Set length7 = constraint7.Dimension
+
+length7.Value = 1.351246
+
+Dim constraint8 As Constraint
+Set constraint8 = constraints1.Item("Offset.19")
+
+Dim length8 As Dimension
+Set length8 = constraint8.Dimension
+
+length8.Value = 93.872748
+
+Dim constraint9 As Constraint
+Set constraint9 = constraints1.Item("Offset.20")
+
+Dim length9 As Dimension
+Set length9 = constraint9.Dimension
+
+length9.Value = 1.975202
+
+Dim constraint10 As Constraint
+Set constraint10 = constraints1.Item("Offset.21")
+
+Dim length10 As Dimension
+Set length10 = constraint10.Dimension
+
+length10.Value = 90.528726
+
+Dim constraint11 As Constraint
+Set constraint11 = constraints1.Item("Offset.22")
+
+Dim length11 As Dimension
+Set length11 = constraint11.Dimension
+
+length11.Value = 2.679857
+
+Dim constraint12 As Constraint
+Set constraint12 = constraints1.Item("Offset.23")
+
+Dim length12 As Dimension
+Set length12 = constraint12.Dimension
+
+length12.Value = 86.545377
+
+Dim constraint13 As Constraint
+Set constraint13 = constraints1.Item("Offset.24")
+
+Dim length13 As Dimension
+Set length13 = constraint13.Dimension
+
+length13.Value = 3.436919
+
+Dim constraint14 As Constraint
+Set constraint14 = constraints1.Item("Offset.25")
+
+Dim length14 As Dimension
+Set length14 = constraint14.Dimension
+
+length14.Value = 81.983364
+
+Dim constraint15 As Constraint
+Set constraint15 = constraints1.Item("Offset.26")
+
+Dim length15 As Dimension
+Set length15 = constraint15.Dimension
+
+length15.Value = 4.217192
+
+Dim constraint16 As Constraint
+Set constraint16 = constraints1.Item("Offset.27")
+
+Dim length16 As Dimension
+Set length16 = constraint16.Dimension
+
+length16.Value = 76.912718
+
+Dim constraint17 As Constraint
+Set constraint17 = constraints1.Item("Offset.28")
+
+Dim length17 As Dimension
+Set length17 = constraint17.Dimension
+
+length17.Value = 4.991328
+
+Dim constraint18 As Constraint
+Set constraint18 = constraints1.Item("Offset.29")
+
+Dim length18 As Dimension
+Set length18 = constraint18.Dimension
+
+length18.Value = 71.411868
+
+Dim constraint19 As Constraint
+Set constraint19 = constraints1.Item("Offset.30")
+
+Dim length19 As Dimension
+Set length19 = constraint19.Dimension
+
+length19.Value = 5.730247
+
+Dim constraint20 As Constraint
+Set constraint20 = constraints1.Item("Offset.31")
+
+Dim length20 As Dimension
+Set length20 = constraint20.Dimension
+
+length20.Value = 65.566513
+
+Dim constraint21 As Constraint
+Set constraint21 = constraints1.Item("Offset.34")
+
+Dim length21 As Dimension
+Set length21 = constraint21.Dimension
+
+length21.Value = 6.405379
+
+Dim constraint22 As Constraint
+Set constraint22 = constraints1.Item("Offset.35")
+
+Dim length22 As Dimension
+Set length22 = constraint22.Dimension
+
+length22.Value = 59.468360
+
+Dim constraint23 As Constraint
+Set constraint23 = constraints1.Item("Offset.36")
+
+Dim length23 As Dimension
+Set length23 = constraint23.Dimension
+
+length23.Value = 6.988977
+
+Dim constraint24 As Constraint
+Set constraint24 = constraints1.Item("Offset.37")
+
+Dim length24 As Dimension
+Set length24 = constraint24.Dimension
+
+length24.Value = 53.213763
+
+Dim constraint25 As Constraint
+Set constraint25 = constraints1.Item("Offset.40")
+
+Dim length25 As Dimension
+Set length25 = constraint25.Dimension
+
+length25.Value = 7.778684
+
+Dim constraint26 As Constraint
+Set constraint26 = constraints1.Item("Offset.41")
+
+Dim length26 As Dimension
+Set length26 = constraint26.Dimension
+
+length26.Value = 40.634985
+
+Dim constraint27 As Constraint
+Set constraint27 = constraints1.Item("Offset.42")
+
+Dim length27 As Dimension
+Set length27 = constraint27.Dimension
+
+length27.Value = 7.919779
+
+Dim constraint28 As Constraint
+Set constraint28 = constraints1.Item("Offset.43")
+
+Dim length28 As Dimension
+Set length28 = constraint28.Dimension
+
+length28.Value = 34.467975
+
+Dim constraint29 As Constraint
+Set constraint29 = constraints1.Item("Offset.44")
+
+Dim length29 As Dimension
+Set length29 = constraint29.Dimension
+
+length29.Value = 7.836316
+
+Dim constraint30 As Constraint
+Set constraint30 = constraints1.Item("Offset.45")
+
+Dim length30 As Dimension
+Set length30 = constraint30.Dimension
+
+length30.Value = 28.541825
+
+Dim constraint31 As Constraint
+Set constraint31 = constraints1.Item("Offset.46")
+
+Dim length31 As Dimension
+Set length31 = constraint31.Dimension
+
+length31.Value = 7.529026
+
+Dim constraint32 As Constraint
+Set constraint32 = constraints1.Item("Offset.47")
+
+Dim length32 As Dimension
+Set length32 = constraint32.Dimension
+
+length32.Value = 22.961766
+
+Dim constraint33 As Constraint
+Set constraint33 = constraints1.Item("Offset.48")
+
+Dim length33 As Dimension
+Set length33 = constraint33.Dimension
+
+length33.Value = 7.009710
+
+Dim constraint34 As Constraint
+Set constraint34 = constraints1.Item("Offset.49")
+
+Dim length34 As Dimension
+Set length34 = constraint34.Dimension
+
+length34.Value = 17.822186
+
+Dim constraint35 As Constraint
+Set constraint35 = constraints1.Item("Offset.50")
+
+Dim length35 As Dimension
+Set length35 = constraint35.Dimension
+
+length35.Value = 6.300553
+
+Dim constraint36 As Constraint
+Set constraint36 = constraints1.Item("Offset.51")
+
+Dim length36 As Dimension
+Set length36 = constraint36.Dimension
+
+length36.Value = 13.209395
+
+Dim constraint37 As Constraint
+Set constraint37 = constraints1.Item("Offset.52")
+
+Dim length37 As Dimension
+Set length37 = constraint37.Dimension
+
+length37.Value = 5.432540
+
+Dim constraint38 As Constraint
+Set constraint38 = constraints1.Item("Offset.53")
+
+Dim length38 As Dimension
+Set length38 = constraint38.Dimension
+
+length38.Value = 9.199604
+
+Dim constraint39 As Constraint
+Set constraint39 = constraints1.Item("Offset.54")
+
+Dim length39 As Dimension
+Set length39 = constraint39.Dimension
+
+length39.Value = 4.442697
+
+Dim constraint40 As Constraint
+Set constraint40 = constraints1.Item("Offset.55")
+
+Dim length40 As Dimension
+Set length40 = constraint40.Dimension
+
+length40.Value = 5.857330
+
+Dim constraint41 As Constraint
+Set constraint41 = constraints1.Item("Offset.56")
+
+Dim length41 As Dimension
+Set length41 = constraint41.Dimension
+
+length41.Value = 3.370394
+
+Dim constraint42 As Constraint
+Set constraint42 = constraints1.Item("Offset.57")
+
+Dim length42 As Dimension
+Set length42 = constraint42.Dimension
+
+length42.Value = 3.234345
+
+Dim constraint43 As Constraint
+Set constraint43 = constraints1.Item("Offset.58")
+
+Dim length43 As Dimension
+Set length43 = constraint43.Dimension
+
+length43.Value = 2.253125
+
+Dim constraint44 As Constraint
+Set constraint44 = constraints1.Item("Offset.59")
+
+Dim length44 As Dimension
+Set length44 = constraint44.Dimension
+
+length44.Value = 1.369173
+
+Dim constraint45 As Constraint
+Set constraint45 = constraints1.Item("Offset.60")
+
+Dim length45 As Dimension
+Set length45 = constraint45.Dimension
+
+length45.Value = 1.122353
+
+Dim constraint46 As Constraint
+Set constraint46 = constraints1.Item("Offset.61")
+
+Dim length46 As Dimension
+Set length46 = constraint46.Dimension
+
+length46.Value = 0.287020
+
+Dim constraint47 As Constraint
+Set constraint47 = constraints1.Item("Offset.64")
+
+Dim length47 As Dimension
+Set length47 = constraint47.Dimension
+
+length47.Value = 1.043888
+
+Dim constraint48 As Constraint
+Set constraint48 = constraints1.Item("Offset.65")
+
+Dim length48 As Dimension
+Set length48 = constraint48.Dimension
+
+length48.Value = 0.501509
+
+Dim constraint49 As Constraint
+Set constraint49 = constraints1.Item("Offset.70")
+
+Dim length49 As Dimension
+Set length49 = constraint49.Dimension
+
+length49.Value = 2.698980
+
+Dim constraint50 As Constraint
+Set constraint50 = constraints1.Item("Offset.71")
+
+Dim length50 As Dimension
+Set length50 = constraint50.Dimension
+
+length50.Value = 3.788006
+
+Dim constraint51 As Constraint
+Set constraint51 = constraints1.Item("Offset.72")
+
+Dim length51 As Dimension
+Set length51 = constraint51.Dimension
+
+length51.Value = 3.301389
+
+Dim constraint52 As Constraint
+Set constraint52 = constraints1.Item("Offset.73")
+
+Dim length52 As Dimension
+Set length52 = constraint52.Dimension
+
+length52.Value = 6.512002
+
+Dim constraint53 As Constraint
+Set constraint53 = constraints1.Item("Offset.74")
+
+Dim length53 As Dimension
+Set length53 = constraint53.Dimension
+
+length53.Value = 3.750675
+
+Dim constraint54 As Constraint
+Set constraint54 = constraints1.Item("Offset.75")
+
+Dim length54 As Dimension
+Set length54 = constraint54.Dimension
+
+length54.Value = 9.898696
+
+Dim constraint55 As Constraint
+Set constraint55 = constraints1.Item("Offset.76")
+
+Dim length55 As Dimension
+Set length55 = constraint55.Dimension
+
+length55.Value = 4.049352
+
+Dim constraint56 As Constraint
+Set constraint56 = constraints1.Item("Offset.77")
+
+Dim length56 As Dimension
+Set length56 = constraint56.Dimension
+
+length56.Value = 13.893742
+
+Dim constraint57 As Constraint
+Set constraint57 = constraints1.Item("Offset.78")
+
+Dim length57 As Dimension
+Set length57 = constraint57.Dimension
+
+length57.Value = 4.205583
+
+Dim constraint58 As Constraint
+Set constraint58 = constraints1.Item("Offset.79")
+
+Dim length58 As Dimension
+Set length58 = constraint58.Dimension
+
+length58.Value = 18.435415
+
+Dim constraint59 As Constraint
+Set constraint59 = constraints1.Item("Offset.80")
+
+Dim length59 As Dimension
+Set length59 = constraint59.Dimension
+
+length59.Value = 4.233898
+
+Dim constraint60 As Constraint
+Set constraint60 = constraints1.Item("Offset.81")
+
+Dim length60 As Dimension
+Set length60 = constraint60.Dimension
+
+length60.Value = 23.455554
+
+Dim constraint61 As Constraint
+Set constraint61 = constraints1.Item("Offset.82")
+
+Dim length61 As Dimension
+Set length61 = constraint61.Dimension
+
+length61.Value = 4.154918
+
+Dim constraint62 As Constraint
+Set constraint62 = constraints1.Item("Offset.83")
+
+Dim length62 As Dimension
+Set length62 = constraint62.Dimension
+
+length62.Value = 28.880246
+
+Dim constraint63 As Constraint
+Set constraint63 = constraints1.Item("Offset.84")
+
+Dim length63 As Dimension
+Set length63 = constraint63.Dimension
+
+length63.Value = 3.994058
+
+Dim constraint64 As Constraint
+Set constraint64 = constraints1.Item("Offset.85")
+
+Dim length64 As Dimension
+Set length64 = constraint64.Dimension
+
+length64.Value = 34.630326
+
+Dim constraint65 As Constraint
+Set constraint65 = constraints1.Item("Offset.86")
+
+Dim length65 As Dimension
+Set length65 = constraint65.Dimension
+
+length65.Value = 3.779126
+
+Dim constraint66 As Constraint
+Set constraint66 = constraints1.Item("Offset.87")
+
+Dim length66 As Dimension
+Set length66 = constraint66.Dimension
+
+length66.Value = 40.626883
+
+Dim constraint67 As Constraint
+Set constraint67 = constraints1.Item("Offset.90")
+
+Dim length67 As Dimension
+Set length67 = constraint67.Dimension
+
+length67.Value = 3.180807
+
+Dim constraint68 As Constraint
+Set constraint68 = constraints1.Item("Offset.91")
+
+Dim length68 As Dimension
+Set length68 = constraint68.Dimension
+
+length68.Value = 53.065289
+
+Dim constraint69 As Constraint
+Set constraint69 = constraints1.Item("Offset.92")
+
+Dim length69 As Dimension
+Set length69 = constraint69.Dimension
+
+length69.Value = 2.822224
+
+Dim constraint70 As Constraint
+Set constraint70 = constraints1.Item("Offset.93")
+
+Dim length70 As Dimension
+Set length70 = constraint70.Dimension
+
+length70.Value = 59.269771
+
+Dim constraint71 As Constraint
+Set constraint71 = constraints1.Item("Offset.94")
+
+Dim length71 As Dimension
+Set length71 = constraint71.Dimension
+
+length71.Value = 2.449964
+
+Dim constraint72 As Constraint
+Set constraint72 = constraints1.Item("Offset.95")
+
+Dim length72 As Dimension
+Set length72 = constraint72.Dimension
+
+length72.Value = 65.335187
+
+Dim constraint73 As Constraint
+Set constraint73 = constraints1.Item("Offset.96")
+
+Dim length73 As Dimension
+Set length73 = constraint73.Dimension
+
+length73.Value = 2.079105
+
+Dim constraint74 As Constraint
+Set constraint74 = constraints1.Item("Offset.97")
+
+Dim length74 As Dimension
+Set length74 = constraint74.Dimension
+
+length74.Value = 71.166061
+
+Dim constraint75 As Constraint
+Set constraint75 = constraints1.Item("Offset.98")
+
+Dim length75 As Dimension
+Set length75 = constraint75.Dimension
+
+length75.Value = 1.721195
+
+Dim constraint76 As Constraint
+Set constraint76 = constraints1.Item("Offset.99")
+
+Dim length76 As Dimension
+Set length76 = constraint76.Dimension
+
+length76.Value = 76.669961
+
+Dim constraint77 As Constraint
+Set constraint77 = constraints1.Item("Offset.100")
+
+Dim length77 As Dimension
+Set length77 = constraint77.Dimension
+
+length77.Value = 1.384916
+
+Dim constraint78 As Constraint
+Set constraint78 = constraints1.Item("Offset.101")
+
+Dim length78 As Dimension
+Set length78 = constraint78.Dimension
+
+length78.Value = 81.759035
+
+Dim constraint79 As Constraint
+Set constraint79 = constraints1.Item("Offset.102")
+
+Dim length79 As Dimension
+Set length79 = constraint79.Dimension
+
+length79.Value = 1.077031
+
+Dim constraint80 As Constraint
+Set constraint80 = constraints1.Item("Offset.103")
+
+Dim length80 As Dimension
+Set length80 = constraint80.Dimension
+
+length80.Value = 86.351486
+
+Dim constraint81 As Constraint
+Set constraint81 = constraints1.Item("Offset.104")
+
+Dim length81 As Dimension
+Set length81 = constraint81.Dimension
+
+length81.Value = 0.803300
+
+Dim constraint82 As Constraint
+Set constraint82 = constraints1.Item("Offset.105")
+
+Dim length82 As Dimension
+Set length82 = constraint82.Dimension
+
+length82.Value = 90.372973
+
+Dim constraint83 As Constraint
+Set constraint83 = constraints1.Item("Offset.106")
+
+Dim length83 As Dimension
+Set length83 = constraint83.Dimension
+
+length83.Value = 0.569124
+
+Dim constraint84 As Constraint
+Set constraint84 = constraints1.Item("Offset.107")
+
+Dim length84 As Dimension
+Set length84 = constraint84.Dimension
+
+length84.Value = 93.757920
+
+Dim constraint85 As Constraint
+Set constraint85 = constraints1.Item("Offset.108")
+
+Dim length85 As Dimension
+Set length85 = constraint85.Dimension
+
+length85.Value = 0.379775
+
+Dim constraint86 As Constraint
+Set constraint86 = constraints1.Item("Offset.109")
+
+Dim length86 As Dimension
+Set length86 = constraint86.Dimension
+
+length86.Value = 96.450725
+
+Dim constraint87 As Constraint
+Set constraint87 = constraints1.Item("Offset.110")
+
+Dim length87 As Dimension
+Set length87 = constraint87.Dimension
+
+length87.Value = 0.240209
+
+Dim constraint88 As Constraint
+Set constraint88 = constraints1.Item("Offset.111")
+
+Dim length88 As Dimension
+Set length88 = constraint88.Dimension
+
+length88.Value = 98.406854
+
+Dim constraint89 As Constraint
+Set constraint89 = constraints1.Item("Offset.112")
+
+Dim length89 As Dimension
+Set length89 = constraint89.Dimension
+
+length89.Value = 0.154591
+
+Dim constraint90 As Constraint
+Set constraint90 = constraints1.Item("Offset.113")
+
+Dim length90 As Dimension
+Set length90 = constraint90.Dimension
+
+length90.Value = 99.593762
+
+Dim constraint91 As Constraint
+Set constraint91 = constraints1.Item("Offset.114")
+
+Dim length91 As Dimension
+Set length91 = constraint91.Dimension
+
+length91.Value = 0.125721
+
+Dim constraint92 As Constraint
+Set constraint92 = constraints1.Item("Offset.115")
+
+Dim length92 As Dimension
+Set length92 = constraint92.Dimension
+
+length92.Value = 99.991619
+
+Dim constraint93 As Constraint
+Set constraint93 = constraints1.Item("Offset.116")
+
+Dim length93 As Dimension
+Set length93 = constraint93.Dimension
+
+length93.Value = 7.454712
+
+Dim constraint94 As Constraint
+Set constraint94 = constraints1.Item("Offset.117")
+
+Dim length94 As Dimension
+Set length94 = constraint94.Dimension
+
+length94.Value = 46.902253
+
+Dim constraint95 As Constraint
+Set constraint95 = constraints1.Item("Offset.120")
+
+Dim length95 As Dimension
+Set length95 = constraint95.Dimension
+
+length95.Value = 3.507007
+
+Dim constraint96 As Constraint
+Set constraint96 = constraints1.Item("Offset.121")
+
+Dim length96 As Dimension
+Set length96 = constraint96.Dimension
+
+length96.Value = 46.818695
+
+Dim constraint97 As Constraint
+Set constraint97 = constraints1.Item("Offset.124")
+
+Dim length97 As Dimension
+Set length97 = constraint97.Dimension
+
+length97.Value = 0.206987
+
+Dim constraint98 As Constraint
+Set constraint98 = constraints1.Item("Offset.125")
+
+Dim length98 As Dimension
+Set length98 = constraint98.Dimension
+
+length98.Value = 99.617708
+
+Dim constraint99 As Constraint
+Set constraint99 = constraints1.Item("Offset.126")
+
+Dim length99 As Dimension
+Set length99 = constraint99.Dimension
+
+length99.Value = 1.945126
+
+Dim constraint100 As Constraint
+Set constraint100 = constraints1.Item("Offset.127")
+
+Dim length100 As Dimension
+Set length100 = constraint100.Dimension
+
+length100.Value = 1.772511
+
+Dim reference1 As Reference
+Set reference1 = part1.CreateReferenceFromObject(point2D1)
+
+Dim geometricElements1 As GeometricElements
+Set geometricElements1 = sketch1.GeometricElements
+
+Dim axis2D1 As GeometricElement
+Set axis2D1 = geometricElements1.Item("AbsoluteAxis")
+
+Dim line2D1 As CATBaseDispatch
+Set line2D1 = axis2D1.GetItem("HDirection")
+
+Dim reference2 As Reference
+Set reference2 = part1.CreateReferenceFromObject(line2D1)
+
+Dim constraint101 As Constraint
+Set constraint101 = constraints1.AddBiEltCst(catCstTypeDistance, reference1, reference2)
+
+constraint101.Mode = catCstModeDrivingDimension
+
+Dim length101 As Dimension
+Set length101 = constraint101.Dimension
+
+length101.Value = 5.000000
+
+Dim reference3 As Reference
+Set reference3 = part1.CreateReferenceFromObject(point2D1)
+
+Dim line2D2 As CATBaseDispatch
+Set line2D2 = axis2D1.GetItem("VDirection")
+
+Dim reference4 As Reference
+Set reference4 = part1.CreateReferenceFromObject(line2D2)
+
+Dim constraint102 As Constraint
+Set constraint102 = constraints1.AddBiEltCst(catCstTypeDistance, reference3, reference4)
+
+constraint102.Mode = catCstModeDrivingDimension
+
+Dim length102 As Dimension
+Set length102 = constraint102.Dimension
+
+length102.Value = 10.000000
+
+sketch1.CloseEdition 
+
+part1.InWorkObject = hybridBody1
+
+part1.Update 
+
+End Sub
