@@ -19,11 +19,11 @@
 | MAC        | 1.49 m   |
 
 
-**Phase 2 — Lift Distribution
-Method**
+**Phase 2 — Lift Distribution**
+*Method*
 
 Elliptical lift assumption.
-Validation
+*Validation*
 
 Integrated Lift:
 
@@ -37,12 +37,12 @@ Error:
 
 0.038 %
 
-Phase 3 — Spar Sizing
-Assumptions
+**Phase 3 — Spar Sizing**
+*Assumptions*
 Ultimate Load Factor = 5.7
 Yield Strength = 300 MPa
 Safety Factor = 1.5
-Results
+*Results*
 | Parameter     | Value    |
 | ------------- | -------- |
 | Root Moment   | 397 kN·m |
@@ -50,8 +50,8 @@ Results
 | Web Thickness | 5.24 mm  |
 
 
-Phase 4 — Wing Box Layout
-Structural Layout
+**Phase 4 — Wing Box Layout**
+*Structural Layout*
 Front Spar = 25% chord
 Rear Spar = 65% chord
 Rib Spacing = 0.5 m
