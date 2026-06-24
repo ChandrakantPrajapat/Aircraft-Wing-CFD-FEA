@@ -26,7 +26,7 @@ Sub CATMain()
     Set hybridBodies = part1.HybridBodies
 
     Dim airfoilSet
-    Set airfoilSet = hybridBodies.Item("Root_Airfoil_GSD")
+    Set airfoilSet = hybridBodies.Item("03_Airfoils")
 
     Dim hsf
     Set hsf = part1.HybridShapeFactory
