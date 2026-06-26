@@ -1,3 +1,65 @@
+Language="VBSCRIPT"
+
 Sub CATMain()
+
+    Dim csvFile
+    csvFile = "D:\Aircraft-Wing-CFD-FEA\Root_Airfoil_CATIA.csv"
+
+    Dim fso
+    Set fso = CreateObject("Scripting.FileSystemObject")
+
+    If Not fso.FileExists(csvFile) Then
+        MsgBox "CSV file not found:" & vbCrLf & csvFile
+        Exit Sub
+    End If
+
+    Dim file
+    Set file = fso.OpenTextFile(csvFile, 1)
+
+    Dim partDoc
+    Set partDoc = CATIA.ActiveDocument
+
+    Dim part1
+    Set part1 = partDoc.Part
+
+    Dim hybridBodies
+    Set hybridBodies = part1.HybridBodies
+
+    Dim airfoilSet
+    Set airfoilSet = hybridBodies.Item("03_Airfoils")
+
+    Dim hsf
+    Set hsf = part1.HybridShapeFactory
+
+    Dim line
+    Dim vals
+    Dim xVal
+    Dim zVal
+    Dim pt
+
+    Do Until file.AtEndOfStream
+
+        line = Trim(file.ReadLine)
+
+        If line <> "" Then
+
+            vals = Split(line, ",")
+
+            xVal = CDbl(vals(0))
+            zVal = CDbl(vals(1))
+
+            Set pt = hsf.AddNewPointCoord(xVal, 0, zVal)
+
+            airfoilSet.AppendHybridShape pt
+
+        End If
+
+    Loop
+
+    file.Close
+
+    part1.Update
+
+    MsgBox "Airfoil points imported successfully."
 
 End Sub
