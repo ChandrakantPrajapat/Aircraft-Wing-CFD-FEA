@@ -7,4 +7,4 @@ or 100
 50-50 upper and lower
 
 with the higher density on the leading and trailing edges.
-generate 100 coordinates with *cosine spacing*, which naturally concentrates points near the leading and trailing edges.
+generate 100 coordinates with *cosine spacing*, which naturally concentrates points near the leading and trailing edges. 
