@@ -14,7 +14,14 @@ Chord = 100;
 
 Root = [rootX(:) rootY(:)];
 
-writematrix(Root,'Root_Airfoil_100pts.csv');
+exportFolder = fullfile(fileparts(mfilename('fullpath')),'..','..','Exports');
+
+if ~exist(exportFolder,'dir')
+    mkdir(exportFolder);
+end
+
+writematrix(Root,...
+    fullfile(exportFolder,'Root_Airfoil_100pts.csv'));
 
 figure('Color','w')
 plot(rootX,rootY,'b-','LineWidth',1.8)
@@ -25,7 +32,15 @@ grid on
 xlabel('X (mm)')
 ylabel('Y (mm)')
 title('Root Airfoil - NACA 2412')
-exportgraphics(gcf,'Root_Airfoil_100pts.png','Resolution',300);
+figureFolder = fullfile(fileparts(mfilename('fullpath')),'..','..','Figures');
+
+if ~exist(figureFolder,'dir')
+    mkdir(figureFolder);
+end
+
+exportgraphics(gcf,...
+    fullfile(figureFolder,'Root_Airfoil_100pts.png'),...
+    'Resolution',300);
 
 %% Tip Airfoil (NACA 2409)
 
