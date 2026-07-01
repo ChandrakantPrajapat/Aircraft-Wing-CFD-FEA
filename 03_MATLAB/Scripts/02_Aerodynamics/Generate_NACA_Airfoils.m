@@ -1,74 +1,56 @@
-clc;
-clear;
-close all;
+clc
+clear
+close all
 
-%% PARAMETERS
+%% ----------------------------------------------------
+% Aircraft Wing CAD Airfoil Generation
+%% ----------------------------------------------------
 
-N = 51;                 % target CAD point count
-c = 100;                % normalized chord (mm)
+Chord = 100;
 
-%% ROOT AIRFOIL
-m = 0.02;               % 2% camber
-p = 0.4;                % 40% camber location
-t = 0.12;               % 12% thickness
+%% Root Airfoil (NACA 2412)
 
-[x2412,y2412] = generateNACA4(m,p,t,N,c);
+[rootX,rootY] = generateNACA4_CAD(0.02,0.40,0.12,Chord);
 
-%% TIP AIRFOIL
-m = 0.02;
-p = 0.4;
-t = 0.09;               % 9% thickness
+Root = [rootX(:) rootY(:)];
 
-[x2409,y2409] = generateNACA4(m,p,t,N,c);
+writematrix(Root,'Root_Airfoil_100pts.csv');
 
-%% SAVE FILES
-
-rootData = [x2412(:) y2412(:)];
-tipData  = [x2409(:) y2409(:)];
-
-% writematrix(rootData,...
-% '../../Exports/Root_Airfoil_CAD.csv');
-
-% writematrix(tipData,...
-% '../../Exports/Tip_Airfoil_CAD.csv');
-
-%% PLOT
-
-figure
-plot(x2412,y2412,'LineWidth',2)
+figure('Color','w')
+plot(rootX,rootY,'b-','LineWidth',1.8)
+hold on
+plot(rootX,rootY,'r.','MarkerSize',10)
 axis equal
 grid on
-title('NACA 2412 Root Airfoil')
+xlabel('X (mm)')
+ylabel('Y (mm)')
+title('Root Airfoil - NACA 2412')
+exportgraphics(gcf,'Root_Airfoil_100pts.png','Resolution',300);
 
-figure
-plot(x2409,y2409,'LineWidth',2)
+%% Tip Airfoil (NACA 2409)
+
+[tipX,tipY] = generateNACA4_CAD(0.02,0.40,0.09,Chord);
+
+Tip = [tipX(:) tipY(:)];
+
+writematrix(Tip,'Tip_Airfoil_100pts.csv');
+
+figure('Color','w')
+plot(tipX,tipY,'b-','LineWidth',1.8)
+hold on
+plot(tipX,tipY,'r.','MarkerSize',10)
 axis equal
 grid on
-title('NACA 2409 Tip Airfoil')
+xlabel('X (mm)')
+ylabel('Y (mm)')
+title('Tip Airfoil - NACA 2409')
+exportgraphics(gcf,'Tip_Airfoil_100pts.png','Resolution',300);
 
-% ==========================
-% CATIA REDUCED POINT SET
-% ==========================
-
-nKeep = 51;
-
-idx = round(linspace(1,length(x2412),nKeep));
-
-X_catia = x2412(idx);
-Y_catia = y2412(idx);
-
-CATIA_Data = [X_catia(:) Y_catia(:)];
-
-% writematrix(rootData,...
-% '../../Exports/Root_Airfoil_CAD.csv');
-
-% writematrix(tipData,...
-% '../../Exports/Tip_Airfoil_CAD.csv');
-
-disp(size(CATIA_Data))
-
-disp(CATIA_Data(1:10,:))
-
-disp(CATIA_Data(end-9:end,:))
-
-writematrix(CATIA_Data,'Root_Airfoil_CATIA.csv');
+disp('--------------------------------------')
+disp('CAD Airfoil Generation Complete')
+disp('Files Generated:')
+disp('Root_Airfoil_100pts.csv')
+disp('Tip_Airfoil_100pts.csv')
+disp('Root_Airfoil_100pts.png')
+disp('Tip_Airfoil_100pts.png')
+disp('--------------------------------------')
