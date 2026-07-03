@@ -3,7 +3,7 @@ Language="VBSCRIPT"
 Sub CATMain()
 
     Dim csvFile
-    csvFile = "D:\Aircraft-Wing-CFD-FEA\Root_Airfoil_CATIA.csv"
+    csvFile = "D:\Aircraft-Wing-CFD-FEA\04_CAD\00_Master_Skeleton\Airfoils\Root_Airfoil_100pts.csv"
 
     Dim fso
     Set fso = CreateObject("Scripting.FileSystemObject")
@@ -26,7 +26,7 @@ Sub CATMain()
     Set hybridBodies = part1.HybridBodies
 
     Dim airfoilSet
-    Set airfoilSet = hybridBodies.Item("03_Airfoils")
+    Set airfoilSet = hybridBodies.Item("airfoil")
 
     Dim hsf
     Set hsf = part1.HybridShapeFactory
